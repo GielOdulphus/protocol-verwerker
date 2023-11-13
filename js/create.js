@@ -1,3 +1,5 @@
+import PopUp from './popup.js'
+
 function downloadZip (zip, naam) {
   zip.generateAsync({ type: 'blob' })
     .then(function (blob) {
@@ -8,8 +10,8 @@ function downloadZip (zip, naam) {
 const timer = ms => new Promise(res => setTimeout(res, ms))
 
 async function create (type) {
-  popupText('Bestanden Openen')
-  openPopup()
+  PopUp.popupText('Bestanden Openen')
+  PopUp.openPopup()
   const files = document.querySelector('#file').files
   if (files.length < 0) {
     alert('Selecteer één of meerdere bestanden')
