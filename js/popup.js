@@ -1,4 +1,4 @@
-export class PopUp(){
+export class PopUp{
   function openPopup () {
     // Display the pop-up
     $('#load-pop-up').show('fast', 'swing')
